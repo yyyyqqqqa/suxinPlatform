@@ -1,0 +1,69 @@
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">首页</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav" id="0menu1">
+
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Action111111</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+<script type="application/javascript">
+    function getMenu() {
+        var params = {};
+        var retFunc = {};
+        retFunc['success'] = function (data) {
+            if (data["code"] == "0") {
+                $.each(data.result, function (i, row) {
+                    if (row['PARENT'] == '0menu1') {
+                        var menu = '<li class="dropdown" id="' + row['SPARENT'] + '">';
+                        menu = menu + '<a href="#" class="dropdown-toggle" data-toggle="dropdown">' + row["NAME"] + '<span class="caret"></span></a>';
+                        menu = menu + '<ul class="dropdown-menu" role="menu"> </ul></li>';
+                        $("#" + row['PARENT']).append(menu);
+                    } else {
+                        $("#" + row['PARENT'] + " ul").append('<li id="' + row['SPARENT'] + '"><a href="' + row["PARAM1"] + '">' + row["NAME"] + '</a></li>');
+                    }
+                });
+            } else {
+                $('#myModal').modal('toggle')
+                $("#msgContain").text(data["msg"]);
+                $('#msgbox').modal('show');
+            }
+        };
+        retFunc['error'] = function (data) {
+        };
+        retFunc['complete'] = function (data) {
+        };
+        params['parents'] = '0menu1';
+        getData('D101', params, retFunc);
+    }
+
+    $(document).ready(function () {
+        getMenu();
+        $('li.dropdown').mouseover(function () {
+            $(this).addClass('open');
+        }).mouseout(function () {
+            $(this).removeClass('open');
+        });
+    });
+</script>

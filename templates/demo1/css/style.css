@@ -1,0 +1,448 @@
+body,
+div,
+ul,
+li,
+h1,
+h2 {
+    margin: 0px;
+    padding: 0px;
+}
+
+/*顶部样式*/
+
+.main-top {
+    background: #FAFAFA;
+}
+
+.main-nav {
+    position: absolute;
+    left: 43px;
+    height: 42px;
+    top: 0px;
+}
+
+.main-nav ul {
+    height: 42px;
+}
+
+.main-nav ul li {
+    float: left;
+    line-height: 42px;
+    width: 100px;
+    text-align: center;
+    border-right: 1px solid #eee;
+    list-style-type: none;
+}
+
+.main-nav ul li:hover {
+    background: #FFFFFF;
+    cursor: pointer;
+}
+
+.main-nav ul li.selected {
+    background: #FFFFFF;
+}
+
+.main-top .icon_menu {
+    display: block;
+    width: 42px;
+    height: 42px;
+    border-right: 1px solid #eee;
+    background: url(../images/skin_icons.png) 11px -239px no-repeat;
+    cursor: pointer;
+}
+
+/*顶部右边导航*/
+
+.nav-right {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+.nav-right .info {
+    float: left;
+    padding-right: 10px;
+    height: 42px;
+    line-height: 42px;
+}
+
+.nav-right .info i {
+    display: block;
+    float: left;
+    margin: 6px 10px 0 0;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #eee;
+    border-radius: 30px;
+    background: url(../images/skin_icons.png) no-repeat 0 -330px;
+    overflow: hidden;
+}
+
+.nav-right .info i img {
+    width: 30px;
+    height: 30px;
+}
+
+.nav-right .info span {
+    display: block;
+    float: left;
+    padding-top: 6px;
+    color: #686f7f;
+    font-size: 12px;
+    line-height: 1.2em;
+}
+
+/*右边导航菜单项*/
+
+.nav-right .option {
+    position: relative;
+    cursor: pointer;
+    float: left;
+    padding: 0 11px;
+    border-left: 1px solid #eee;
+}
+
+.nav-right .option i {
+    display: block;
+    width: 20px;
+    height: 42px;
+    background: url(../images/skin_icons.png) -40px -239px no-repeat;
+}
+
+.nav-right .option:hover {
+    background: #fff;
+}
+
+.nav-right .option:hover .drop-wrap {
+    display: block;
+}
+
+.drop-wrap {
+    display: none;
+    position: absolute;
+    top: 42px;
+    right: 1px;
+}
+
+.drop-wrap .arrow {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 11px;
+    width: 21px;
+    height: 11px;
+    text-indent: -9999em;
+    background: url(../images/skin_icons.png) no-repeat 0 -290px;
+}
+
+.drop-wrap .item {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #dbdbdb;
+    background: #fff;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.drop-wrap .item li {
+    list-style-type: none;
+}
+
+.drop-wrap .item li a {
+    display: block;
+    text-decoration: none;
+    padding: 8px 15px;
+    color: #686f7f;
+    font-size: 12px;
+    line-height: 1em;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.drop-wrap .item li a:hover {
+    color: #fff;
+    text-decoration: none;
+    background: #16a0d3;
+}
+
+/*左边样式*/
+
+.logo {
+    display: block;
+    height: 42px;
+    background: url(../images/logo.png) no-repeat center #fafafa;
+    border: 1px solid #eee;
+    border-top: 0;
+    border-left: 0;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.sidebar-nav {
+}
+
+.sidebar-nav .list-group {
+    display: none;
+}
+
+.sidebar-nav .list-group .list-wrap {
+    position: absolute;
+    top: 43px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0 10px;
+    width: 160px;
+    overflow: auto;
+}
+
+.sidebar-nav .list-group h1 {
+    display: none;
+}
+
+.sidebar-nav .list-group h1.selected {
+}
+
+.sidebar-nav .list-group h2 {
+    position: relative;
+    color: #fff;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 40px;
+    border-bottom: 1px solid #468dbd;
+}
+
+.sidebar-nav .list-group h2 i {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    display: block;
+    background: url(../images/skin_icons.png) -109px -165px no-repeat;
+}
+
+.sidebar-nav .list-group ul li {
+    list-style-type: none;
+    color: #fff;
+    font-size: 12px;
+}
+
+.sidebar-nav .list-group ul li a {
+    display: block;
+    position: relative;
+    height: 32px;
+    line-height: 32px;
+    color: #fff;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.sidebar-nav .list-group ul li a:hover {
+    text-decoration: none;
+    background: #2e84bf;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.sidebar-nav .list-group ul li a.selected {
+    text-decoration: none;
+    background: #16a0d3;
+    border-radius: 3px;
+}
+
+.sidebar-nav .list-group ul li a .icon {
+    display: block;
+    float: left;
+    margin: 3px 3px 3px 0;
+    width: 14px;
+    height: 14px;
+    overflow: hidden;
+    display: inline-block;
+    float: none;
+    vertical-align: middle;
+}
+
+.sidebar-nav .list-group ul li a .icon.folder {
+    background: url(../images/skin_icons.png) 0 -168px no-repeat;
+}
+
+.sidebar-nav .list-group ul li a .icon.file {
+    background: url(../images/skin_icons.png) -28px -168px no-repeat;
+}
+
+.sidebar-nav .list-group ul li a .icon img {
+}
+
+.sidebar-nav .list-group ul li a .expandable {
+    position: absolute;
+    display: block;
+    top: 10px;
+    right: 4px;
+    width: 12px;
+    height: 12px;
+    background: url(../images/skin_icons.png) no-repeat;
+}
+
+.sidebar-nav .list-group ul li a .expandable.open {
+    background-position: -84px -168px;
+}
+
+.sidebar-nav .list-group ul li a .expandable.close {
+    background-position: -56px -168px;
+}
+
+/*页面最小化布局*/
+
+.laymini .main-top {
+    left: 0px;
+}
+
+.laymini .main-top .main-nav {
+    display: none;
+}
+
+.laymini .main-left {
+    width: 43px;
+    background-color: #0C4B77;
+}
+
+.laymini .main-left .list-group {
+    display: block !important;
+    width: 30px;
+    height: 30px;
+    padding: 6px;
+}
+
+.laymini .main-left .list-group h1 {
+    display: block;
+    color: #fff;
+    font-size: 12px;
+    font-weight: normal;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+.laymini .main-left .list-group h1.selected {
+    background-color: #16a0d3;
+    border-radius: 3px;
+}
+
+.laymini .main-left .list-group:hover h1 {
+    background-color: #16a0d3;
+    border-radius: 3px;
+}
+
+.laymini .main-left .list-group:hover .list-wrap {
+    display: block;
+}
+
+.laymini .main-left .list-group h1 img {
+    padding: 8px;
+    width: 14px;
+    height: 14px;
+}
+
+.laymini .main-left .list-group .list-wrap {
+    display: none;
+    position: absolute;
+    left: 43px;
+    padding: 0px 10px;
+    top: 43px;
+    background-color: #267CB7;
+}
+
+.laymini .main-container {
+    left: 43px;
+}
+
+/**/
+
+.navtab {
+    padding-top: 5px;
+    padding-bottom: 3px;
+    padding-left: 2px;
+    border-bottom: 1px solid #eee;
+    list-style-type: none;
+    height: 32px;
+}
+
+.navtab li {
+    border: 1px solid #d3d3d3;
+    margin: 3px 2px 0px 2px;
+    cursor: pointer;
+    float: left;
+}
+
+.navtab li > a {
+    text-decoration: none;
+    padding: 4px 0px 4px 9px;
+    display: inline-block;
+}
+
+#home a {
+    padding: 4px 9px 4px 9px;
+}
+
+.navtab li.active {
+    background: #e2e2e2 !important;
+}
+
+.navtab li > a > span {
+    color: #333;
+    font-size: 12px;
+}
+
+.clear {
+    clear: both;
+    height: 0;
+    line-height: 0;
+    font-size: 0
+}
+
+.btni {
+    background: url(../images/delete.png) center center no-repeat;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+}
+
+.btni:hover {
+    cursor: pointer;
+}
+
+.main_frame {
+    margin-top: 40px;
+    height: 200px;
+    display: none;
+}
+
+.navContain iframe.active {
+    display: block;
+}
+
+.main-container .closetab {
+    display: none;
+    list-style-type: none;
+    width: auto;
+    z-index: 1000;
+    position: absolute;
+    margin: 0px;
+    padding: 8px 0px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    font-size: 12px;
+    font-family: "Microsoft YaHei";
+}
+
+.main-container .closetab li a {
+    display: block;
+    color: #333333;
+    padding: 3px 17px;
+    text-decoration: none;
+}
+
+.main-container .closetab li a:hover {
+    background-color: #EFEFEF;
+}

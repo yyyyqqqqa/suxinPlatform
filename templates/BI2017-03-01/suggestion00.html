@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>BI_建议结论</title>
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="../lib/jquery/jquery-1.11.1.min.js"></script>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="../lib/bootstrap/bootstrap.min.css">
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="../lib/bootstrap/bootstrap.min.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="../lib/default00.css">
+
+    <style type="text/css">
+        body {
+            background-color: #F7F7F7;
+            margin-left: 0px;
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            padding-top: 60px;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="header00">
+
+    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+        <div class="btn-group" role="group">
+            <a class="glyphicon glyphicon-arrow-left text-left padding-left15" href="#"> </a>
+        </div>
+        <div class="btn-group" role="group">
+            <a type="button" class="btn">建议结论</a>
+        </div>
+        <div class="btn-group" role="group">
+            <a class="btn navbar-btn" href="#">2017.03.25</a>
+        </div>
+    </div>
+
+</nav>
+
+<div class="container-fluid" id="container00">
+
+    <div class="row">
+        <div class="panel-group" id="accordion00" role="tablist" aria-multiselectable="true">
+
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading1">
+
+                    <a role="button" data-toggle="collapse" data-parent="#accordion00" href="#collapse1"
+                       aria-expanded="true" aria-controls="collapse1">建议内容</a>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse in" role="tabpanel"
+                     aria-labelledby="heading1">
+                    <div class="panel-body">
+                        目前急诊科有 <span class="red00">2</span> 个严重病人正在就诊 有<span class="red00">5</span> 正在候诊，建议增加诊间
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading2">
+
+                    <a role="button" data-toggle="collapse" data-parent="#accordion00" href="#collapse2"
+                       aria-expanded="true" aria-controls="collapse2">建议算法</a>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse" role="tabpanel"
+                     aria-labelledby="heading2">
+                    <div class="panel-body">
+                        急诊的评分对系统数据有很高的及时性要求 , 有些医院急诊都是先操作而后补手续 , 这就对系统 统计造成了不精确.<br>
+                        推荐:<br>
+                        过去4小时内的1级2级3级病人数 (A1 , A2 , A3)<br>
+                        已挂急诊号等待就诊的病人 (BB)<br>
+                        急诊诊间量 (CC)<br>
+                        XX = (A1 * 3 + A2 * 2 + A3 * 1 + BB * 3) / CC<br>
+                        若XX 大于10 就是有风险的 , 若XX大于20 风险就很高了<br>
+                        在超过 20 时，我们会推荐增加急诊诊间。
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading3">
+
+                    <a role="button" data-toggle="collapse" data-parent="#accordion00" href="#collapse3"
+                       aria-expanded="true" aria-controls="collapse3">相关指标</a>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse" role="tabpanel"
+                     aria-labelledby="heading3">
+                    <div class="panel-body">
+
+                        <div class="row">
+                            <div class="col-xs-6 " style="border:1px solid rgba(188, 9, 232, 0.11);">
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <p class="text-left">急诊等待人次</p>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <p class="text-right"><a href="#">详情</a></p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <h3 style="color: #F00">4
+                                            <small>(人)</small>
+                                        </h3>
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-12">
+
+                                        同期:5 &nbsp; 同比:-2.39
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-xs-6 " style="border:1px solid rgba(188, 9, 232, 0.11);">
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <p class="text-left">急诊已就诊</p>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <p class="text-right"><a href="#">详情</a></p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <h3 style="color: #F00">10
+                                            <small>(人)</small>
+                                        </h3>
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-12">
+
+                                        同期:30 &nbsp; 同比:-30%
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-xs-6 padding-top15" style="border:1px solid rgba(188, 9, 232, 0.11);">
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <p class="text-left">4小时内重症</p>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <p class="text-right"><a href="#">详情</a></p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <h3 style="color: #F00">2
+                                            <small>(次)</small>
+                                        </h3>
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        同期:3 &nbsp; 同比:25%
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-xs-6 padding-top15" style="border:1px solid rgba(188, 9, 232, 0.11);">
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <p class="text-left">急诊诊间量</p>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <p class="text-right"><a href="#">详情</a></p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <h3 style="color: #F00">2
+                                            <small>(人)</small>
+                                        </h3>
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        同期:2 &nbsp; 同比:0%
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading4">
+
+                    <a role="button" data-toggle="collapse" data-parent="#accordion00" href="#collapse4"
+                       aria-expanded="true" aria-controls="collapse4">其它建议</a>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse" role="tabpanel"
+                     aria-labelledby="heading4">
+                    <div class="list-group">
+                        <li class="list-group-item">皮肤科1号诊间有 <span class="red00">30</span>
+                            个病人会超过预诊时间
+                            <span class="red00">60</span> 分钟，该诊间医生有 <span class="red00">40 </span>分钟未叫诊，请关注
+                        </li>
+                        <li class="list-group-item">骨科 2 号诊间有 <span class="red00">20</span>
+                            个病人会超过预诊时间
+                            <span class="red00">60</span> 分钟，该诊间医生有 <span class="red00">30</span>
+                            分钟未叫诊，请关注
+                        </li>
+                        <li class="list-group-item">门诊取药 门诊1楼有 <span class="red00">20</span>
+                            位患着正等待取药，
+                            门诊3楼药房排队的数较少，请按排人员疏导
+                        </li>
+                        <li class="list-group-item">门诊检科有 <span class="red00">20</span> 正在排队等待
+                            抽血，另外医生已开出检验单有 <span class="red00">143</span> 单，请关注
+                        </li>
+                        <li class="list-group-item">门诊皮肤科 梅毒检测项目今日共 <span class="red00">100</span> 次
+                            其中
+                            <span class="red00">80%</span> 结果为阳性，正常情况 <span
+                                    class="red00">40%--60%</span>，请关注
+                        </li>
+                        <li class="list-group-item">某科室看诊效率 <span class="red00">3.95</span>
+                            近期三个月低于平均值
+                            <span class="red00">5.43</span> 请关注
+                        </li>
+                        <li class="list-group-item">门诊1楼自助机在早晨 <span class="red00">9</span>
+                            工作压力较大，相对门诊2楼东边自助机较清闲，建议按排人员疏导 <span class="red00">60</span>
+                            分钟，该诊间医生有 <span
+                                    class="red00">40 </span>分钟未叫诊，请关注
+                        </li>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+</body>
+</html>

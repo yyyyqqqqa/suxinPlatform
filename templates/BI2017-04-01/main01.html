@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>BI_main</title>
+    <link rel="icon" href="">
+
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="../lib/jquery/jquery-1.11.1.min.js"></script>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="../lib/bootstrap/bootstrap.min.css">
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="../lib/bootstrap/bootstrap.min.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+
+
+    <link rel="stylesheet" href="../lib/default00.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    <style type="text/css">
+        body {
+            background-color: #F7F7F7;
+            padding-top: 60px;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">决策支持</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+            <form class="navbar-form navbar-right">
+                <input type="text" class="form-control" placeholder="Search...">
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 hidden-xs">
+            <div class="list-group">
+                <a href="#" class="list-group-item active">门诊就诊量</a>
+                <a href="#" class="list-group-item">今日情况</a>
+                <a href="#" class="list-group-item">工作效率</a>
+                <a href="#" class="list-group-item">收入分析</a>
+                <a href="#" class="list-group-item">医量质量</a>
+                <a href="#" class="list-group-item">药品分析</a>
+                <a href="#" class="list-group-item">手术分析</a>
+                <a href="#" class="list-group-item">物资分析</a>
+                <a href="#" class="list-group-item">其它分析</a>
+                <a href="#" class="list-group-item">其它分析</a>
+                <a href="#" class="list-group-item">其它分析</a>
+                <a href="#" class="list-group-item">其它分析</a>
+                <a href="#" class="list-group-item">其它分析</a>
+            </div>
+        </div>
+
+        <div class="col-sm-9 col-md-10 col-xs-12 padding-bottom5">
+            <div class="row padding-bottom5">
+                <h4 class="text-danger">门诊就诊量分析</h4>
+                <hr>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;从右图 门诊就诊量涨增率趋势 中可以看出，从 <span
+                        class="text-danger"> 2017-02月份</span> 门诊就诊量开始下降 至 <span class="text-danger"> -1%</span> <br><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;所以 数据将从 <span class="text-danger"> 2017-02月份</span> 为分析起点<br>
+
+                </div>
+
+                <div class="col-md-9">
+                    <div class="row">
+                        <img src="1.png" class="img-responsive">
+                    </div>
+                    <div class="row padding-top5">
+                        <div class="btn-group" role="button">
+                            <a type="button" class="btn btn-default btn-sm">日</a>
+                            <a type="button" class="btn btn-default btn-sm">周</a>
+                            <a type="button" class="btn btn-default btn-sm active">月</a>
+                            <a type="button" class="btn btn-default btn-sm">年</a>
+                        </div>
+
+                        <div class="btn-group padding-left15" role="button">
+                            <a type="button" class="btn btn-default btn-sm">环比</a>
+                            <a type="button" class="btn btn-default btn-sm active">同比</a>
+                        </div>
+
+                        <div class="btn-group padding-left15" role="button">
+                            <a type="button" class="btn btn-default btn-sm active" href="#">折线图</a>
+                            <a type="button" class="btn btn-default btn-sm" href="#">柱状图</a>
+                            <a type="button" class="btn btn-default btn-sm" href="#">饼状图</a>
+                        </div>
+
+                        <div class="btn-group padding-left15" role="button">
+                            <a type="button" class="btn btn-default btn-sm" href="#">其它医院</a>
+                        </div>
+                    </div>
+
+                </div>
+                <hr>
+            </div>
+
+            <div class="row padding-top15">
+                <ul class="nav nav-tabs">
+                    <li role="presentation" class="active">
+                        <a href="#indexInfo1" aria-controls="indexInfo1" role="tab" data-toggle="tab">场景概述</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#indexInfo2" aria-controls="indexInfo2" role="tab" data-toggle="tab">异常的监测思路</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#indexInfo3" aria-controls="indexInfo3" role="tab" data-toggle="tab">提升就诊量的思路</a>
+                    </li>
+                </ul>
+                <div class="tab-content padding-top15">
+                    <div role="tabpanel" class="tab-pane active" id="indexInfo1">
+                        &nbsp;&nbsp;门诊就诊量增加对医院来说是业务量增加了，但伴随着风险也增加了，要做智能的分析看是否可以找出增加的原因，还有对门诊就诊量增加后医院的运营风险要做出及时的预案。<br>
+                        &nbsp;&nbsp;门诊就诊量减少，原因众多，看短期减少还是慢慢减少的，门诊就诊量减少对社会来说是好事，生病的人也许少了。但对医院来说可能是其它非常严重的原因，要找出问题，天气原因，季节原因，医生看诊效率，诊间少了。。。等等<br><br>
+                        &nbsp;&nbsp;就诊量增长率：通常指本期期间就诊量之和减去年同期全部期间就诊量之差比上去年全部期间就诊量。反映期间就诊量增减变化的一种现象。<br>
+                        &nbsp;&nbsp;公式：(本期就诊量 - 同期就诊量) \ 同期就诊量 = 就诊量增长率<br><br>
+                        &nbsp;&nbsp;以我们的经验，门诊就诊量增应跟着医院的建设发展缓缓增涨，若是下降若急速上涨都是有异常原因造成。
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="indexInfo2">
+                        &nbsp;&nbsp;首先要找出数据的拐点。数据的拐点一定有原因造成的，所以从这个拐点收集数据，展示给管理者，为发现根本原因提供支撑。
+                        &nbsp;&nbsp;通过数据判断，指标是紧剧增涨的还是缓缓增涨的，若是增涨率超过上线的140%则是紧剧增涨的，若是在120%-140%内则是缓缓增加的。<br>
+                        &nbsp;&nbsp;就诊量是紧剧增加的，就要去查下是受天气的影响，市里重大事故(这个数据采不到)，或我院是否在哪里做了宣传。或新开科室等等<br><br>
+                        &nbsp;&nbsp;从数据拐点开始统计，查看所有科室的就诊量的增涨，主要分析是否有科室从拐点开始异常增涨的。方法，查看所有科室平均值，看是否有大于平均值过高的。<br>
+                        &nbsp;&nbsp;从数据拐点开始统计，查看所有挂号类别的增涨率，看是否有大于平均值过高的。或许因为加入了某些专家，而吸引了患者。<br>
+                        &nbsp;&nbsp;若是医生对病人诊断的代码精确可用，则从数据拐点开始统计，查看所有疾病类别的增涨率，看是否有大于平均值过高的。<br>
+                        &nbsp;&nbsp;从数据拐点开始统计，各项目或药品的增涨率，看是否有大于平均值过高的。或许是医院新开了某项诊疗技术，而吸引了患者<br>
+                        &nbsp;&nbsp;若是可以统计到病人归属地(可从病人填写，身份证前几位或手机号码前几位)，则从数据拐点开始统计，查看所有每个地区的增涨率，看是否有大于平均值过高的。<br>
+                        &nbsp;&nbsp;从数据拐点开始统计，查看患者年龄段的增涨率，看是否有大于平均值过高的。<br>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="indexInfo3">
+                        1.&nbsp;&nbsp;找出是否有限制就诊量的因素。<br>
+                        &nbsp;&nbsp;是否存在有病人想挂号看诊，但因为没号源而损失的挂号，或是病人已预约但最终未看诊的病人。
+                        &nbsp;&nbsp;这里我们通过非当天现场预约挂号指标，科室预约挂号最后时间点指标，以预约挂号并未看诊量指标<br>
+                        非当天现场预约挂号指标：是指患者当天来到医院在自助机上预约了明天或以后的挂号。这种情况通常是没有预约的患者来到院内就诊，确没有号源了<br>
+                        &nbsp;&nbsp;科室预约挂号最后时间点指标：是指最后一个预约号，距离就诊结束被预约的时间，例如骨科明天下午的预约号在今晚9.30被患着预约了(也就是从9.30开始不能在预约了)。明天骨科看诊下班时间为5.30
+                        那这个指标的时间是 20小时。该指标主要表达限制了网络预约挂号的量，数字最好不要大于24，否者部分网络用户没有号挂，则可能选择其它医院。<br>
+                        &nbsp;&nbsp;以预约挂号并未看诊量指标：是指每个期间有多人患者已预约确未来看诊的，可能因为等太久原因。<br><br>
+
+                        2.&nbsp;&nbsp;通过数据分析，提高复诊率及减小病人流失率。<br>
+                        &nbsp;&nbsp;例如，一种疾病大约要复诊4次，可有部患者只就诊了一次，这部分患者可能因为做了某个项目感觉不好，或某个医生的病人复诊率很差。<br>
+                        &nbsp;&nbsp;这些都需要建立相应的专题分析，就不在这里详细说明了。
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!--
+                        <div class="row">
+                            <div class="col-md-12 padding-top15 padding-bottom15">
+
+
+                                <a class="btn" role="button" data-toggle="collapse" href="#indexInfo" aria-expanded="false"
+                                   aria-controls="collapseExample">
+                                    <span class="label label-info">概念</span>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                                        class="text-info glyphicon glyphicon-sort-by-attributes">&nbsp;门诊就诊量场景概念</span>
+
+                                </a>
+                                <hr>
+                                <div class="collapse in" id="indexInfo">
+                                    <div class="well">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <h4 class="text-danger">场景概述</h4>
+
+                                            </div>
+                                            <div class="col-md-4">
+                                                <h4 class="text-danger">异常的监测思路</h4>
+
+                                            </div>
+                                            <div class="col-md-4">
+                                                <h4 class="text-danger">提高就诊量的思路</h4>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            -->
+
+            <div class="row">
+                <hr>
+                <h4 class="text-danger">门诊就诊量监测相关指标</h4>
+                <hr>
+            </div>
+
+            <div class="row padding-bottom15">
+                <div class="col-md-3  border1">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <p class="text-left"><span class="label label-danger">异常</span>&nbsp;&nbsp;&nbsp;&nbsp;门诊挂号类别增涨率</p>
+                        </div>
+                        <div class="col-md-3">
+                            <p class="text-right"><a href="#">详情</a></p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 class="text-danger">1.1
+                                <small>(%)</small>
+                            </h3>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            注意：专家号挂号类别从<span class="text-danger">2017-02月份 5.6%</span>异常下降至 <span class="text-danger">1.1%</span>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 border1">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <p class="text-left"><span class="label label-warning">告警</span>&nbsp;&nbsp;&nbsp;&nbsp;门诊挂号科室增涨率</p>
+                        </div>
+                        <div class="col-md-3">
+                            <p class="text-right"><a href="#">详情</a></p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 class="text-danger">-0.3
+                                <small>(%)</small>
+                            </h3>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            注意：<span class="text-danger">小儿科门诊，骨科门诊</span>从<span class="text-danger">2017-02月份 2.2</span>下降至 <span
+                                class="text-danger">-0.3%</span>。请关注
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 border1">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <p class="text-left"><span class="label label-info">正常</span>&nbsp;&nbsp;&nbsp;&nbsp;门诊挂号疾病增涨率</p>
+                        </div>
+                        <div class="col-md-3">
+                            <p class="text-right"><a href="#">详情</a></p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 class="text-danger">1.1
+                                <small>(%)</small>
+                            </h3>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            正常
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 border1">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <p class="text-left"><span class="label label-info">正常</span>&nbsp;&nbsp;&nbsp;&nbsp;门诊挂号医疗项目增涨率</p>
+                        </div>
+                        <div class="col-md-3">
+                            <p class="text-right"><a href="#">详情</a></p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 class="text-danger">2.1
+                                <small>(%)</small>
+                            </h3>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            正常
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="row padding-bottom15">
+                <div class="col-md-3 border1">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <p class="text-left"><span class="label label-info">正常</span>&nbsp;&nbsp;门诊人次</p>
+                        </div>
+                        <div class="col-md-3">
+                            <p class="text-right"><a href="#">详情</a></p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 class="text-danger">33,332
+                                <small>(人)</small>
+                            </h3>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            正常
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 border1">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <p class="text-left"><span class="label label-info">正常</span>&nbsp;&nbsp;急诊人次</p>
+                        </div>
+                        <div class="col-md-3">
+                            <p class="text-right"><a href="#">详情</a></p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 class="text-danger">1,213
+                                <small>(人)</small>
+                            </h3>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            正常
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 border1">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <p class="text-left"><span class="label label-info">正常</span>&nbsp;&nbsp;&nbsp;&nbsp;门诊预约人次</p>
+                        </div>
+                        <div class="col-md-3">
+                            <p class="text-right"><a href="#">详情</a></p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 class="text-danger">21,237
+                                <small>(人)</small>
+                            </h3>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            正常
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 border1">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <p class="text-left"><span class="label label-info">正常</span>&nbsp;&nbsp;&nbsp;&nbsp;门诊挂号医疗项目增涨率</p>
+                        </div>
+                        <div class="col-md-3">
+                            <p class="text-right"><a href="#">详情</a></p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 class="text-danger">2.1
+                                <small>(%)</small>
+                            </h3>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            正常
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row">
+                <hr>
+                <h4 class="text-danger">门诊就诊量提升相关指标</h4>
+                <hr>
+            </div>
+            <div class="row padding-bottom15">
+                <div class="col-md-3 border1">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <p class="text-left"><span class="label label-warning">告警</span>&nbsp;&nbsp;&nbsp;&nbsp;非当天现场预约挂号</p>
+                        </div>
+                        <div class="col-md-3">
+                            <p class="text-right"><a href="#">详情</a></p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 class="text-danger">4
+                                <small>(科室)</small>
+                            </h3>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            注意：近期有<span class="text-danger">4</span>个科室 非当天现场预约挂号 比例较高。请查看详情
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 border1">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <p class="text-left"><span class="label label-warning">告警</span>&nbsp;&nbsp;&nbsp;&nbsp;科室预约挂号最后时间</p>
+                        </div>
+                        <div class="col-md-3">
+                            <p class="text-right"><a href="#">详情</a></p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 class="text-danger">3
+                                <small>(科室)</small>
+                            </h3>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            注意：有<span class="text-danger"> 3 </span>科室 预约挂号的最后时间较小，可能会限制患者挂号，有提升的空间。请关注
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 border1">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <p class="text-left"><span class="label label-warning">告警</span>&nbsp;&nbsp;&nbsp;&nbsp;门诊挂号医生复诊率</p>
+                        </div>
+                        <div class="col-md-3">
+                            <p class="text-right"><a href="#">详情</a></p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 class="text-danger">7
+                                <small>(人)</small>
+                            </h3>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            注意：有<span class="text-danger"> 7 </span>个 医生复诊率较差，有提升的空间。请关注
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 border1">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <p class="text-left"><span class="label label-info">正常</span>&nbsp;&nbsp;门诊放射项目对复诊的影响</p>
+                        </div>
+                        <div class="col-md-3">
+                            <p class="text-right"><a href="#">详情</a></p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 class="text-danger">1.5
+                                <small>(%)</small>
+                            </h3>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            正常
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <div class="row padding-bottom15">
+                <div class="col-md-3 border1">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <p class="text-left"><span class="label label-info">正常</span>&nbsp;&nbsp;门诊检验项目对复诊的影响</p>
+                        </div>
+                        <div class="col-md-3">
+                            <p class="text-right"><a href="#">详情</a></p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 class="text-danger">1.3
+                                <small>(%)</small>
+                            </h3>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            正常
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 border1">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <p class="text-left"><span class="label label-info">正常</span>&nbsp;&nbsp;其它专题的分析</p>
+                        </div>
+                        <div class="col-md-3">
+                            <p class="text-right"><a href="#">详情</a></p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 class="text-danger">2
+                                <small>(%)</small>
+                            </h3>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            正常
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+</body>
+</html>

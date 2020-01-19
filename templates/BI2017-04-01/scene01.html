@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>BI_场景</title>
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="../lib/jquery/jquery-1.11.1.min.js"></script>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="../lib/bootstrap/bootstrap.min.css">
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="../lib/bootstrap/bootstrap.min.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="../lib/default00.css">
+
+    <style type="text/css">
+        body {
+            background-color: #F7F7F7;
+            margin-left: 0px;
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            padding-top: 60px;
+            padding-left: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="header00">
+    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+        <div class="btn-group" role="group">
+            <a class="btn navbar-btn glyphicon glyphicon-arrow-left padding-left15" href="main01.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </div>
+        <div class="btn-group" role="group">
+            <a type="button" class="btn">门诊就诊量</a>
+        </div>
+        <div class="btn-group" role="group">
+            <a class="btn navbar-btn" href="#">2017.03.25</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-9">
+            <div class="row">
+                <p class="text-left text-danger">门诊就诊增涨率</p>
+            </div>
+            <div class="row">
+                <img src="1.png" class="img-responsive">
+            </div>
+
+            <div class="row padding-top5 padding-bottom5">
+                <div class="btn-group" role="group">
+                    <a type="button" class="btn btn-sm">日</a>
+                    <a type="button" class="btn btn-sm active">周</a>
+                    <a type="button" class="btn btn-sm">月</a>
+                    <a type="button" class="btn btn-sm">年</a>
+                </div>
+
+                <div class="btn-group" role="group">
+                    <a type="button" class="btn btn-sm">环比</a>
+                    <a type="button" class="btn btn-sm active">同比</a>
+                    <a type="button" class="btn btn-sm">其它医院</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-xs-3">
+            <div class="btn-group btn-group-vertical" role="group">
+                <a class="btn btn-sm active" href="#">折线图</a>
+                <a class="btn btn-sm" href="#">柱状图</a>
+                <a class="btn btn-sm" href="#">饼状图</a>
+                <a class="btn btn-sm" href="#">仪表图</a>
+                <a class="btn btn-sm" href="#">热点图</a>
+                <a class="btn btn-sm" href="#">桑力图</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="panel-group" id="accordion00" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading0">
+                    <a class="glyphicon glyphicon-align-left" role="button" data-toggle="collapse" data-parent="#accordion00"
+                       href="#collapse0" aria-expanded="true" aria-controls="collapse0">
+                        场景概述&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </a>
+                </div>
+
+                <div id="collapse0" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading0">
+                    <div class="panel-body">
+                        &nbsp;&nbsp;门诊就诊量增加对医院来说是业务量增加了，但伴随着风险也增加了，要做智能的分析看是否可以找出增加的原因，还有对门诊就诊量增加后医院的运营风险要做出及时的预案。<br><br>
+                        &nbsp;&nbsp;门诊就诊量减少，原因众多，看短期减少还是慢慢减少的，门诊就诊量减少对社会来说是好事，生病的人也许少了。但对医院来说可能是其它非常严重的原因，要找出问题，天气原因，季节原因，医生看诊效率，诊间少了。。。等等<br><br>
+                        &nbsp;&nbsp;就诊量增长率：通常指本期期间就诊量之和减去年同期全部期间就诊量之差比上去年全部期间就诊量。反映期间就诊量增减变化的一种现象。<br><br>
+                        &nbsp;&nbsp;公式：(本期就诊量 - 同期就诊量) \ 同期就诊量 = 就诊量增长率
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading1">
+
+                    <a class="glyphicon glyphicon-align-left" role="button" data-toggle="collapse" data-parent="#accordion00"
+                       href="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                        异常监测概述&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </a>
+
+                </div>
+                <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+                    <div class="panel-body">
+                        异常的监测，主要分以下四个方向去监测。<br><br>
+
+                        <div class="panel-group" id="panel1" role="tablist" aria-multiselectable="true">
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="panel1d1">
+                                    <a class="glyphicon glyphicon-arrow-down" role="button" data-toggle="collapse"
+                                       data-parent="#panel1" href="#panel1c1" aria-expanded="true" aria-controls="panel1c1">
+                                        门诊就诊增涨率数据区间&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </a>
+                                </div>
+                                <div id="panel1c1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="panel1d1">
+                                    <div class="panel-body">
+                                        &nbsp;&nbsp;&nbsp;&nbsp;为门诊就诊增涨率建立上线和下线，当指标异动超出上线或下线时系统会对数据进行分析，明确造成异动的原因，若是可以并给出建议<br><br>
+                                        门诊就诊增涨率建立上线和下线的计算公式<br>
+                                        取出近一年的增涨率的平均值，<br>
+                                        上线 = 平均值 * 1.2 <br>
+                                        下线 = 平均值 * 0.8
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="panel1d2">
+                                    <a class="glyphicon glyphicon-arrow-down" role="button" data-toggle="collapse"
+                                       data-parent="#panel1" href="#panel1c2" aria-expanded="true" aria-controls="panel1c2">
+                                        门诊就诊增涨率 异常增涨&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </a>
+                                </div>
+                                <div id="panel1c2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="panel1d2">
+                                    <div class="panel-body">
+                                        &nbsp;&nbsp;&nbsp;&nbsp;首先通过数据判断，指标是紧剧增涨的还是缓缓增涨的，若是增涨率超过上线的140%则是紧剧增涨的，若是在120%-140%内则是缓缓增加的。<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;就诊量是紧剧增加的，就要去查下是受天气的影响，市里重大事故(这个数据采不到)，或我院是否在哪里做了宣传。或新开科室等等<br><br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;通过数据曲线找出数，确定就诊增涨率的拐点。<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;从数据拐点开始统计，查看所有科室的就诊量的增涨，主要分析是否有科室从拐点开始异常增涨的。方法，查看所有科室平均值，看是否有大于平均值过高的。<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;从数据拐点开始统计，查看所有挂号类别的增涨率，看是否有大于平均值过高的。或许因为加入了某些专家，而吸引了患者。<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;若是医生对病人诊断的代码精确可用，则从数据拐点开始统计，查看所有疾病类别的增涨率，看是否有大于平均值过高的。<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;从数据拐点开始统计，各项目或药品的增涨率，看是否有大于平均值过高的。或许是医院新开了某项诊疗技术，而吸引了患者<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;若是可以统计到病人归属地(可从病人填写，身份证前几位或手机号码前几位)，则从数据拐点开始统计，查看所有每个地区的增涨率，看是否有大于平均值过高的。<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;从数据拐点开始统计，查看患者年龄段的增涨率，看是否有大于平均值过高的。<br>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="panel1d3">
+                                    <a class="glyphicon glyphicon-arrow-down" role="button" data-toggle="collapse"
+                                       data-parent="#panel1" href="#panel1c3" aria-expanded="true" aria-controls="panel1c3">
+                                        门诊就诊增涨率 异常下降&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </a>
+                                </div>
+                                <div id="panel1c3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="panel1d3">
+                                    <div class="panel-body">
+                                        &nbsp;&nbsp;&nbsp;&nbsp;首先通过数据判断，指标是紧剧增涨的还是缓缓增涨的，若是增涨率超过上线的140%则是紧剧增涨的，若是在120%-140%内则是缓缓增加的。<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;就诊量是紧剧增加的，就要去查下是受天气的影响，市里重大事故(这个数据采不到)，或我院是否在哪里做了宣传。或新开科室等等<br><br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;通过数据曲线找出数，确定就诊增涨率的拐点。<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;从数据拐点开始统计，查看所有科室的就诊量的增涨，主要分析是否有科室从拐点开始异常增涨的。方法，查看所有科室平均值，看是否有大于平均值过高的。<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;从数据拐点开始统计，查看所有挂号类别的增涨率，看是否有大于平均值过高的。或许因为加入了某些专家，而吸引了患者。<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;若是医生对病人诊断的代码精确可用，则从数据拐点开始统计，查看所有疾病类别的增涨率，看是否有大于平均值过高的。<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;从数据拐点开始统计，各项目或药品的增涨率，看是否有大于平均值过高的。或许是医院新开了某项诊疗技术，而吸引了患者<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;若是可以统计到病人归属地(可从病人填写，身份证前几位或手机号码前几位)，则从数据拐点开始统计，查看所有每个地区的增涨率，看是否有大于平均值过高的。<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;从数据拐点开始统计，查看患者年龄段的增涨率，看是否有大于平均值过高的。<br>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="panel1d4">
+                                    <a class="glyphicon glyphicon-arrow-down" role="button" data-toggle="collapse"
+                                       data-parent="#panel1" href="#panel1c4" aria-expanded="true" aria-controls="panel1c4">
+                                        门诊就诊增涨率 质量&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </a>
+                                </div>
+                                <div id="panel1c4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="panel1d4">
+                                    <div class="panel-body">
+                                        &nbsp;&nbsp;&nbsp;&nbsp;就诊增涨率的质量可以从，门诊患者平均费用比例，通过门诊住院比例，患者消费各级别的增涨率是否有差异。<br><br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;还是从数据拐点开始统计，查看门诊患者平均费用比例是否有异常变动。<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;从数据拐点开始统计，查看门诊住院比例是否有异常变动。<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;从数据拐点开始统计，患者消费各级别的增涨率是否有异常变动。患者消费各级别的增涨率是指将患者按照每个次就诊花费来划分。<br>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading2">
+
+                    <a class="glyphicon glyphicon-align-left" role="button" data-toggle="collapse" data-parent="#accordion00"
+                       href="#collapse2" aria-expanded="true" aria-controls="collapse2">
+                        提高就诊增涨率&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </a>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+                    <div class="list-group">
+                        <li class="list-group-item"><a href="suggestion00.html">目前急诊科有 <span class="red00">2</span> 个严重病人正在就诊 有
+                            <span class="red00">5</span> 正在候诊，建议增加诊间</a>
+                        </li>
+                        <li class="list-group-item">皮肤科1号诊间有 <span class="red00">30</span>
+                            个病人会超过预诊时间
+                            <span class="red00">60</span> 分钟，该诊间医生有 <span class="red00">40 </span>分钟未叫诊，请关注
+                        </li>
+                        <li class="list-group-item">骨科 2 号诊间有 <span class="red00">20</span>
+                            个病人会超过预诊时间
+                            <span class="red00">60</span> 分钟，该诊间医生有 <span class="red00">30</span>
+                            分钟未叫诊，请关注
+                        </li>
+                        <li class="list-group-item">门诊取药 门诊1楼有 <span class="red00">20</span>
+                            位患着正等待取药，
+                            门诊3楼药房排队的数较少，请按排人员疏导
+                        </li>
+                        <li class="list-group-item">门诊检科有 <span class="red00">20</span> 正在排队等待
+                            抽血，另外医生已开出检验单有 <span class="red00">143</span> 单，请关注
+                        </li>
+                        <li class="list-group-item">门诊皮肤科 梅毒检测项目今日共 <span class="red00">100</span> 次
+                            其中
+                            <span class="red00">80%</span> 结果为阳性，正常情况 <span
+                                    class="red00">40%--60%</span>，请关注
+                        </li>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading3">
+
+                    <a class="glyphicon glyphicon-align-left" role="button" data-toggle="collapse" data-parent="#accordion00"
+                       href="#collapse3" aria-expanded="true" aria-controls="collapse3">
+                        提高就诊增涨率&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </a>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+                    <div class="panel-body">
+
+                        12qwsdq
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row border1">
+
+        <div class="col-xs-12 padding-bottom5">
+            <a class="btn btn-default text-left" role="button" data-toggle="collapse" href="#dinfo2" aria-expanded="false"
+               aria-controls="collapseExample">
+                <span class="label label-danger">异常</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-danger">门诊就诊增涨率挂号类别分布图</span>
+            </a>
+
+            <div class="collapse" id="dinfo2">
+                <div class="well">
+                    <div class="row">
+                        <p class="text-left">起始日期：2017-01-01</p>
+                    </div>
+
+                    <div class="row">
+                        <img class="img-responsive" src="3.png">
+                    </div>
+
+                    <div class="row padding-top5 padding-left15">
+                        异常： 起始日期2017-01-01 至 2017-03-30医技号增涨率异常增高。<br>
+                        <a class="text-left " href="#"> 继续查看 医技号涨率的时间折线图。。</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 padding-bottom5">
+
+            <a class="btn btn-default text-left" role="button" data-toggle="collapse" href="#dinfo1" aria-expanded="false"
+               aria-controls="collapseExample">
+                <span class="label label-warning">告警</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-warning">门诊就诊增涨率科室分布图</span>
+            </a>
+
+            <div class="collapse" id="dinfo1">
+                <div class="well">
+                    <div class="row">
+                        <p class="text-left">起始日期：2017-01-01</p>
+                    </div>
+
+                    <div class="row">
+                        <img class="img-responsive" src="2.png">
+                    </div>
+
+                    <div class="row padding-top5 padding-left15">
+                        异常： 起始日期2017-01-01 至 2017-03-30儿科门诊，普内门诊挂号增涨率异常增高。<br>
+                        <a class="text-left" href="#"> 继续查看 儿科门诊，普内门诊 涨率的时间折线图。。</a>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-xs-12 padding-bottom5">
+            <a class="btn btn-default text-left" role="button" data-toggle="collapse" href="#dinfo3" aria-expanded="false"
+               aria-controls="collapseExample">
+                <span class="label label-info">正常</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-info">门诊就诊增涨率疾病分布图</span>
+            </a>
+
+            <div class="collapse" id="dinfo3">
+                <div class="well">
+                    <div class="row">
+                        <p class="text-left">起始日期：2017-01-01</p>
+                    </div>
+
+                    <div class="row">
+                        <img class="img-responsive" src="4.png">
+                    </div>
+
+                    <div class="row padding-top5 padding-left15">
+                        数据正常
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 padding-bottom5">
+            <a class="btn btn-default text-left" role="button" data-toggle="collapse" href="#dinfo4" aria-expanded="false"
+               aria-controls="collapseExample">
+                <span class="label label-info">正常</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-info">门诊就诊增涨率医疗项目分布图</span>
+            </a>
+
+            <div class="collapse" id="dinfo4">
+                <div class="well">
+                    <div class="row">
+                        <p class="text-left">起始日期：2017-01-01</p>
+                    </div>
+
+                    <div class="row">
+                        <img class="img-responsive" src="5.png">
+                    </div>
+
+                    <div class="row padding-top5 padding-left15">
+                        数据正常
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 padding-bottom5">
+            <a class="btn btn-default text-left" role="button" data-toggle="collapse" href="#dinfo5" aria-expanded="false"
+               aria-controls="collapseExample">
+                <span class="label label-info">正常</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-info">门诊就诊增涨率患者归属地分布图</span>
+            </a>
+
+            <div class="collapse" id="dinfo5">
+                <div class="well">
+                    <div class="row">
+                        <p class="text-left">起始日期：2017-01-01</p>
+                    </div>
+
+                    <div class="row">
+                        <img class="img-responsive" src="5.png">
+                    </div>
+
+                    <div class="row padding-top5 padding-left15">
+                        数据正常
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 padding-bottom5">
+            <a class="btn btn-default text-left" role="button" data-toggle="collapse" href="#dinfo6" aria-expanded="false"
+               aria-controls="collapseExample">
+                <span class="label label-info">正常</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-info">门诊就诊增涨率患者年龄段分布图</span>
+            </a>
+
+            <div class="collapse" id="dinfo6">
+                <div class="well">
+                    <div class="row">
+                        <p class="text-left">起始日期：2017-01-01</p>
+                    </div>
+
+                    <div class="row">
+                        <img class="img-responsive" src="5.png">
+                    </div>
+
+                    <div class="row padding-top5 padding-left15">
+                        数据正常
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-xs-6 border1">
+            <div class="row">
+                <div class="col-xs-6">
+                    <p class="text-left">门诊人次</p>
+                </div>
+                <div class="col-xs-6">
+                    <p class="text-right"><a href="#">详情</a></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3 style="color: #F00">837,452
+                        <small>(人)</small>
+                    </h3>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+
+                    同期:813,123 &nbsp; 同比:-2.39
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="col-xs-6 " style="border:1px solid rgba(188, 9, 232, 0.11);">
+            <div class="row">
+                <div class="col-xs-6">
+                    <p class="text-left">急诊人次</p>
+                </div>
+                <div class="col-xs-6">
+                    <p class="text-right"><a href="#">详情</a></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3 style="color: #F00">132
+                        <small>(人)</small>
+                    </h3>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+
+                    同期:143,123 &nbsp; 同比:-2.39
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="col-xs-6 padding-top15" style="border:1px solid rgba(188, 9, 232, 0.11);">
+            <div class="row">
+                <div class="col-xs-6">
+                    <p class="text-left">检验治疗</p>
+                </div>
+                <div class="col-xs-6">
+                    <p class="text-right"><a href="#">详情</a></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3 style="color: #F00">237,452
+                        <small>(次)</small>
+                    </h3>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    同期:243,123 &nbsp; 同比:-2.39
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="col-xs-6 padding-top15" style="border:1px solid rgba(188, 9, 232, 0.11);">
+            <div class="row">
+                <div class="col-xs-6">
+                    <p class="text-left">住院人数</p>
+                </div>
+                <div class="col-xs-6">
+                    <p class="text-right"><a href="#">详情</a></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3 style="color: #F00">2,237
+                        <small>(人)</small>
+                    </h3>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+
+                    同期:3,123 &nbsp; 同比:-2.39
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="col-xs-6 padding-top15" style="border:1px solid rgba(188, 9, 232, 0.11);">
+            <div class="row">
+                <div class="col-xs-6">
+                    <p class="text-left">配药单据</p>
+                </div>
+                <div class="col-xs-6">
+                    <p class="text-right"><a href="#">详情</a></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3 style="color: #F00">5237,452
+                        <small>(次)</small>
+                    </h3>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+
+                    同期:5143,123 &nbsp; 同比:-2.39
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="col-xs-6 padding-top15" style="border:1px solid rgba(188, 9, 232, 0.11);">
+            <div class="row">
+                <div class="col-xs-6">
+                    <p class="text-left">死亡人数</p>
+                </div>
+                <div class="col-xs-6">
+                    <p class="text-right"><a href="#">详情</a></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3 style="color: #F00">16
+                        <small>(人)</small>
+                    </h3>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+
+                    同期:26 &nbsp; 同比:-2.39
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="col-xs-6 padding-top15" style="border:1px solid rgba(188, 9, 232, 0.11);">
+            <div class="row">
+                <div class="col-xs-6">
+                    <p class="text-left">总费用</p>
+                </div>
+                <div class="col-xs-6">
+                    <p class="text-right"><a href="#">详情</a></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3 style="color: #F00">452.32
+                        <small>(万元)</small>
+                    </h3>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+
+                    同期:523 &nbsp; 同比:-2.39
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+</body>
+</html>

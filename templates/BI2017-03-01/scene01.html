@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>BI_场景</title>
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="../lib/jquery/jquery-1.11.1.min.js"></script>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="../lib/bootstrap/bootstrap.min.css">
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="../lib/bootstrap/bootstrap.min.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="../lib/default00.css">
+
+    <style type="text/css">
+        body {
+            background-color: #F7F7F7;
+            margin-left: 0px;
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            padding-top: 60px;
+            padding-left: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="header00">
+    <div class="row">
+        <div class="col-xs-4 col-md-4 col-sm-4">
+            <a class="btn navbar-btn glyphicon glyphicon-arrow-left padding-left15" onClick=”javascript:history.back(1);”>1</a>
+        </div>
+        <div class="col-xs-4 col-md-4 col-sm-4">
+            <a class="btn navbar-btn" href="#">今日情况</a>
+        </div>
+        <div class="col-xs-4 col-md-4 col-sm-4">
+            <a class="btn navbar-btn" href="#">2017.03.22</a>
+        </div>
+    </div>
+
+</nav>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-9">
+            <h1>132.34</h1>
+        </div>
+
+        <div class="col-xs-3">
+            <div class="btn-group-vertical" role="group">
+                <a class="btn btn-sm" href="#">环比</a>
+                <a class="btn btn-sm" href="#">同比</a>
+                <a class="btn btn-sm" href="#">其它</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="panel-group" id="accordion00" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading0">
+                    <div class="row">
+                        <div class="col-xs-6">
+
+                            <a role="button" data-toggle="collapse" data-parent="#accordion00" href="#collapse0"
+                               aria-expanded="true"
+                               aria-controls="collapse0">
+                                场景概述
+                            </a>
+                        </div>
+
+                        <div class="col-xs-6">
+
+                            <div class="text-right" role="button" data-toggle="collapse"
+                                 data-parent="#accordion00" href="#collapse0" aria-expanded="true"
+                                 aria-controls="collapse0">
+                                ∨∨
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="collapse0" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading0">
+                    <div class="panel-body">
+                        当前运营,是指从安全的角度来看医院当前的整体运转情况 ,结论和建议也都要从快速实现的角度出发 . 主要影响的因素有, 病人排队时间, 排队等待时间包括,就诊,检查检验,治疗,配药等等. 目前在院
+                        且长时间住院的,等待住院床位的. 及院内死亡人数<br>
+                        首先在当日运营的场景下并不需要取出所有科室的数据展示. 一个全科医院少则几十个科室 , 所以仅展示前十个繁忙科室 , 以下是卫宁施过上千家医院对<br>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading1">
+
+                    <div class="row">
+                        <div class="col-xs-6">
+
+                            <a role="button" data-toggle="collapse" data-parent="#accordion00" href="#collapse1"
+                               aria-expanded="true"
+                               aria-controls="collapse1">
+                                评分说明
+                            </a>
+                        </div>
+
+                        <div class="col-xs-6">
+                            <div class="text-right" role="button" data-toggle="collapse" data-parent="#accordion00"
+                                 href="#collapse1"
+                                 aria-expanded="true"
+                                 aria-controls="collapse1">
+                                ∨∨
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+                <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+                    <div class="panel-body">
+
+                        当前科室看诊效率 (AA 指多少分钟一个病人,应精确到豪秒)<br>
+                        当前科室诊间量 (BB)<br>
+                        当前科室2小时内已诊看量 (CC)<br>
+                        当前科室等待就诊量 (DD)<br>
+                        根据我们部们小妹对上万个病人做了问卷调查, 发现 患者在等待就诊30分钟以内是没有什么问题的, 在30-60分钟会略有焦急 , 在60-90分钟会有风险 , 在90-120分钟时风险就很大了 , 大于120分钟
+                        闹事的的风险就更大了.<br>
+
+                        注XX 是指当前科需要多少个30分钟可以将病人看完<br>
+                        XX = DD * AA \ BB \ 30<br>
+
+                        注 A1 是30分钟 可以看完的 , A2是30-60可以看完的 , ……A5是大于2小时的<br>
+                        A1 = 若XX 大于0小于1则取XX*30 \ AA , 若XX小于0则取 0 , 若XX大于1则取 30 \ AA<br>
+                        A2 = 若XX 大于1小于2则取(XX-1)*30 \ AA , 若XX小于1则取 0 , 若XX大于2则取 30 \ AA<br>
+                        A3 = 若XX 大于2小于3则取(XX-2)*30 \ AA , 若XX小于2则取 0 , 若XX大于3则取 30 \ AA<br>
+                        A4 = 若XX 大于3小于4则取(XX-3)*30 \ AA , 若XX小于3则取 0 , 若XX大于4则取 30 \ AA<br>
+                        A5 = 若XX 大于4则取(XX-4)*30 \ AA , 若XX小于4则取 0<br>
+
+                        最后的评应 = A1 * 0 + A2* 1 + A3*2 + A4*4 + A5*8 + CC \ 10<br>
+
+                        大约的意思是 一个诊室若扎堆一群等待就诊的病人,等待时间越长越容易出事 , CC\10 是指2小时间以就诊的病人也会影响医生的看诊,因为要回去问检查或用药等等事情的.<br>
+
+                        根据我们的经验 , 评分超过60的,会略有风险超过90的风险很大, 这也是我们施实过千家医院的总结<br>
+
+                        其实这里还有很多要写的, 例如,上了预约挂号的,又是一种算法 <br>
+                        系统限号的,又是一种 <br>
+                        这里的评分就有
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading2">
+
+
+                    <div class="row">
+                        <div class="col-xs-6">
+
+                            <a role="button" data-toggle="collapse" data-parent="#accordion00" href="#collapse2"
+                               aria-expanded="true"
+                               aria-controls="collapse2">
+                                建议结论
+                            </a>
+                        </div>
+
+                        <div class="col-xs-6">
+                            <div class="text-right" role="button" data-toggle="collapse" data-parent="#accordion00"
+                                 href="#collapse2"
+                                 aria-expanded="true"
+                                 aria-controls="collapse2">
+                                ∨∨
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div id="collapse2" class="panel-collapse collapse" role="tabpane2" aria-labelledby="heading0">
+                    <div class="list-group">
+                        <li class="list-group-item"><a href="suggestion00.html">目前急诊科有 <span class="red00">2</span> 个严重病人正在就诊 有
+                            <span class="red00">5</span> 正在候诊，建议增加诊间</a>
+                        </li>
+                        <li class="list-group-item">皮肤科1号诊间有 <span class="red00">30</span>
+                            个病人会超过预诊时间
+                            <span class="red00">60</span> 分钟，该诊间医生有 <span class="red00">40 </span>分钟未叫诊，请关注
+                        </li>
+                        <li class="list-group-item">骨科 2 号诊间有 <span class="red00">20</span>
+                            个病人会超过预诊时间
+                            <span class="red00">60</span> 分钟，该诊间医生有 <span class="red00">30</span>
+                            分钟未叫诊，请关注
+                        </li>
+                        <li class="list-group-item">门诊取药 门诊1楼有 <span class="red00">20</span>
+                            位患着正等待取药，
+                            门诊3楼药房排队的数较少，请按排人员疏导
+                        </li>
+                        <li class="list-group-item">门诊检科有 <span class="red00">20</span> 正在排队等待
+                            抽血，另外医生已开出检验单有 <span class="red00">143</span> 单，请关注
+                        </li>
+                        <li class="list-group-item">门诊皮肤科 梅毒检测项目今日共 <span class="red00">100</span> 次
+                            其中
+                            <span class="red00">80%</span> 结果为阳性，正常情况 <span
+                                    class="red00">40%--60%</span>，请关注
+                        </li>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-xs-6 " style="border:1px solid rgba(188, 9, 232, 0.11);">
+            <div class="row">
+                <div class="col-xs-6">
+                    <p class="text-left">门诊人次</p>
+                </div>
+                <div class="col-xs-6">
+                    <p class="text-right"><a href="#">详情</a></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3 style="color: #F00">837,452
+                        <small>(人)</small>
+                    </h3>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+
+                    同期:813,123 &nbsp; 同比:-2.39
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="col-xs-6 " style="border:1px solid rgba(188, 9, 232, 0.11);">
+            <div class="row">
+                <div class="col-xs-6">
+                    <p class="text-left">急诊人次</p>
+                </div>
+                <div class="col-xs-6">
+                    <p class="text-right"><a href="#">详情</a></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3 style="color: #F00">132
+                        <small>(人)</small>
+                    </h3>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+
+                    同期:143,123 &nbsp; 同比:-2.39
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="col-xs-6 padding-top15" style="border:1px solid rgba(188, 9, 232, 0.11);">
+            <div class="row">
+                <div class="col-xs-6">
+                    <p class="text-left">检验治疗</p>
+                </div>
+                <div class="col-xs-6">
+                    <p class="text-right"><a href="#">详情</a></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3 style="color: #F00">237,452
+                        <small>(次)</small>
+                    </h3>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    同期:243,123 &nbsp; 同比:-2.39
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="col-xs-6 padding-top15" style="border:1px solid rgba(188, 9, 232, 0.11);">
+            <div class="row">
+                <div class="col-xs-6">
+                    <p class="text-left">住院人数</p>
+                </div>
+                <div class="col-xs-6">
+                    <p class="text-right"><a href="#">详情</a></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3 style="color: #F00">2,237
+                        <small>(人)</small>
+                    </h3>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+
+                    同期:3,123 &nbsp; 同比:-2.39
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="col-xs-6 padding-top15" style="border:1px solid rgba(188, 9, 232, 0.11);">
+            <div class="row">
+                <div class="col-xs-6">
+                    <p class="text-left">配药单据</p>
+                </div>
+                <div class="col-xs-6">
+                    <p class="text-right"><a href="#">详情</a></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3 style="color: #F00">5237,452
+                        <small>(次)</small>
+                    </h3>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+
+                    同期:5143,123 &nbsp; 同比:-2.39
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="col-xs-6 padding-top15" style="border:1px solid rgba(188, 9, 232, 0.11);">
+            <div class="row">
+                <div class="col-xs-6">
+                    <p class="text-left">死亡人数</p>
+                </div>
+                <div class="col-xs-6">
+                    <p class="text-right"><a href="#">详情</a></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3 style="color: #F00">16
+                        <small>(人)</small>
+                    </h3>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+
+                    同期:26 &nbsp; 同比:-2.39
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="col-xs-6 padding-top15" style="border:1px solid rgba(188, 9, 232, 0.11);">
+            <div class="row">
+                <div class="col-xs-6">
+                    <p class="text-left">总费用</p>
+                </div>
+                <div class="col-xs-6">
+                    <p class="text-right"><a href="#">详情</a></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3 style="color: #F00">452.32
+                        <small>(万元)</small>
+                    </h3>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+
+                    同期:523 &nbsp; 同比:-2.39
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</body>
+</html>

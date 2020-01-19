@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>BI_main</title>
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="../lib/jquery/jquery-1.11.1.min.js"></script>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="../lib/bootstrap/bootstrap.min.css">
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="../lib/bootstrap/bootstrap.min.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- 组件-->
+    <link rel="stylesheet" href="../lib/bootstrap/bootstrap-treeview.min.css">
+    <script src="../lib/bootstrap/bootstrap-treeview.min.js"></script>
+
+    <link rel="stylesheet" href="../lib/default00.css">
+
+    <style type="text/css">
+        body {
+            background-color: #F7F7F7;
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+    </style>
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="header00">
+
+    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+        <div class="btn-group" role="group">
+            <a class="padding-left15" href="#">王院长</a>
+        </div>
+        <div class="btn-group" role="group">
+            <a type="button" class="btn">决策支持</a>
+        </div>
+        <div class="btn-group" role="group">
+            <a class="btn navbar-btn" href="#">2017.03.22</a>
+        </div>
+    </div>
+</nav>
+
+<nav class="navbar navbar-default navbar-fixed-bottom padding-top5" role="navigation" id="footer00">
+
+    <div class="btn-group btn-group-justified" role="group" aria-label="123123123">
+        <div class="btn-group" role="group">
+            <a type="button" class="btn">全院视角</a>
+        </div>
+        <div class="btn-group" role="group">
+            <a type="button" class="btn">科室视角</a>
+        </div>
+        <div class="btn-group" role="group">
+            <a type="button" class="btn">医生视角</a>
+        </div>
+        <div class="btn-group" role="group">
+            <a type="button" class="btn">设置</a>
+        </div>
+    </div>
+
+</nav>
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading1">
+
+                    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                        <div class="btn-group" role="group">
+                            <a type="button" class="btn" href="../BI2017-03-28/scene01.html">门诊就诊量 &nbsp;&nbsp;&nbsp;&nbsp;</a>
+                        </div>
+                        <div class="btn-group" role="group">
+                            <a type="button" class="red20 btn" href="../BI2017-03-28/scene01.html">132.32</a>
+                        </div>
+                        <div class="btn-group" role="group">
+                            <a type="button" class="btn" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#collapse1" aria-expanded="true" aria-controls="collapse1">&nbsp;&nbsp;&nbsp;&nbsp; 更多 <span
+                                    class="badge">6</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse in" role="tabpanel"
+                     aria-labelledby="heading1">
+                    <div class="list-group">
+                        <li class="list-group-item">目前急诊科有 <span class="red00">2</span> 个严重病人正在就诊 有
+                            <span class="red00">5</span> 正在候诊，建议增加诊间
+                        </li>
+                        <li class="list-group-item">皮肤科1号诊间有 <span class="red00">30</span>
+                            个病人会超过预诊时间
+                            <span class="red00">60</span> 分钟，该诊间医生有 <span class="red00">40 </span>分钟未叫诊，请关注
+                        </li>
+                        <li class="list-group-item">骨科 2 号诊间有 <span class="red00">20</span>
+                            个病人会超过预诊时间
+                            <span class="red00">60</span> 分钟，该诊间医生有 <span class="red00">30</span>
+                            分钟未叫诊，请关注
+                        </li>
+                        <li class="list-group-item">门诊取药 门诊1楼有 <span class="red00">20</span>
+                            位患着正等待取药，
+                            门诊3楼药房排队的数较少，请按排人员疏导
+                        </li>
+                        <li class="list-group-item">门诊检科有 <span class="red00">20</span> 正在排队等待
+                            抽血，另外医生已开出检验单有 <span class="red00">143</span> 单，请关注
+                        </li>
+                        <li class="list-group-item">门诊皮肤科 梅毒检测项目今日共 <span class="red00">100</span> 次
+                            其中
+                            <span class="red00">80%</span> 结果为阳性，正常情况 <span
+                                    class="red00">40%--60%</span>，请关注
+                        </li>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" czscv id="headingOne">
+                    <table width="95%" border="0">
+                        <tr>
+                            <td align="left"><h4 class="panel-title"><a href="../BI/scene01.html">今日情况..</a></h4></td>
+                            <td align="center"><a href="../BI/scene01.html" class="red20">132.32</a></td>
+                            <td align="right"><a role="button" data-toggle="collapse"
+                                                 data-parent="#accordion" href="#collapseOne"
+                                                 aria-expanded="true" aria-controls="collapseOne">
+                                                <span class="label label-info"> 更多 <span
+                                                        class="badge">6</span></span></a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel"
+                     aria-labelledby="headingOne">
+                    <div class="list-group">
+                        <li class="list-group-item">目前急诊科有 <span class="red00">2</span> 个严重病人正在就诊 有
+                            <span class="red00">5</span> 正在候诊，建议增加诊间
+                        </li>
+                        <li class="list-group-item">皮肤科1号诊间有 <span class="red00">30</span>
+                            个病人会超过预诊时间
+                            <span class="red00">60</span> 分钟，该诊间医生有 <span class="red00">40 </span>分钟未叫诊，请关注
+                        </li>
+                        <li class="list-group-item">骨科 2 号诊间有 <span class="red00">20</span>
+                            个病人会超过预诊时间
+                            <span class="red00">60</span> 分钟，该诊间医生有 <span class="red00">30</span>
+                            分钟未叫诊，请关注
+                        </li>
+                        <li class="list-group-item">门诊取药 门诊1楼有 <span class="red00">20</span>
+                            位患着正等待取药，
+                            门诊3楼药房排队的数较少，请按排人员疏导
+                        </li>
+                        <li class="list-group-item">门诊检科有 <span class="red00">20</span> 正在排队等待
+                            抽血，另外医生已开出检验单有 <span class="red00">143</span> 单，请关注
+                        </li>
+                        <li class="list-group-item">门诊皮肤科 梅毒检测项目今日共 <span class="red00">100</span> 次
+                            其中
+                            <span class="red00">80%</span> 结果为阳性，正常情况 <span
+                                    class="red00">40%--60%</span>，请关注
+                        </li>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading2">
+                    <table width="95%" border="0">
+                        <tr>
+                            <td align="left"><h4 class="panel-title"><a href="../BI/scene02.html">工作效率..</a></h4></td>
+                            <td align="center"><a href="../BI/scene02.html" class="red20">23424</a></td>
+                            <td align="right"><a role="button" data-toggle="collapse"
+                                                 data-parent="#accordion" href="#collapse2"
+                                                 aria-expanded="true" aria-controls="collapse2">
+                                                <span class="label label-info"> 更多 <span
+                                                        class="badge">2</span></span></a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse" role="tabpanel"
+                     aria-labelledby="heading2">
+                    <div class="list-group">
+                        <li class="list-group-item">某科室看诊效率 <span class="red00">3.95</span>
+                            近期三个月低于平均值
+                            <span class="red00">5.43</span> 请关注
+                        </li>
+                        <li class="list-group-item">门诊1楼自助机在早晨 <span class="red00">9</span>
+                            工作压力较大，相对门诊2楼东边自助机较清闲，建议按排人员疏导 <span class="red00">60</span>
+                            分钟，该诊间医生有 <span
+                                    class="red00">40 </span>分钟未叫诊，请关注
+                        </li>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading3">
+                    <table width="95%" border="0">
+                        <tr>
+                            <td align="left"><h4 class="panel-title"><a href="#">收入分析..</a></h4></td>
+                            <td align="center"><a href="#" class="red20">132.32</a></td>
+                            <td align="right"><a role="button" data-toggle="collapse"
+                                                 data-parent="#accordion" href="#collapse3"
+                                                 aria-expanded="true" aria-controls="collapse3">
+                                                <span class="label label-info"> 更多 <span
+                                                        class="badge">3</span></span></a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse" role="tabpanel"
+                     aria-labelledby="heading3">
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">近一个月总收入环比有所减少 <span class="red00">5.4% </span>
+                                具体原因是门诊挂号指标下降，请看<a herf="#">患者减少分析</a>
+                            </li>
+                            <li class="list-group-item">皮肤科1号诊间有 <span class="red00">30</span>
+                                个病人会超过预诊时间
+                                <span class="red00">60</span> 分钟，该诊间医生有 <span class="red00">40 </span>分钟未叫诊，请关注
+                            </li>
+                            <li class="list-group-item">骨科 2 号诊间有 <span class="red00">20</span>
+                                个病人会超过预诊时间
+                                <span class="red00">60</span> 分钟，该诊间医生有 <span class="red00">30</span>
+                                分钟未叫诊，请关注
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading5">
+                    <table width="95%" border="0">
+                        <tr>
+                            <td align="left"><h4 class="panel-title"><a href="#">医疗质量..</a></h4></td>
+                            <td align="center"><a href="#" class="red20">132.32</a></td>
+                            <td align="right"><a role="button" data-toggle="collapse"
+                                                 data-parent="#accordion" href="#collapse5"
+                                                 aria-expanded="true" aria-controls="collapse5">
+                                                <span class="label label-info"> 更多 <span
+                                                        class="badge">1</span></span></a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="collapse5" class="panel-collapse collapse" role="tabpanel"
+                     aria-labelledby="heading5">
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">近一个月总。。。。。。。。。。。
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading6">
+                    <table width="95%" border="0">
+                        <tr>
+                            <td align="left"><h4 class="panel-title"><a href="#">药品分析..</a></h4></td>
+                            <td align="center"><a href="#" class="red20">132.32</a></td>
+                            <td align="right"><a role="button" data-toggle="collapse"
+                                                 data-parent="#accordion" href="#collapse6"
+                                                 aria-expanded="true" aria-controls="collapse6">
+                                                <span class="label label-info"> 更多 <span
+                                                        class="badge">1</span></span></a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="collapse6" class="panel-collapse collapse" role="tabpanel"
+                     aria-labelledby="heading6">
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">近一个月总。。。。。。。。。。。
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading7">
+                    <table width="95%" border="0">
+                        <tr>
+                            <td align="left"><h4 class="panel-title"><a href="#">手术分析..</a></h4></td>
+                            <td align="center"><a href="#" class="red20">132.32</a></td>
+                            <td align="right"><a role="button" data-toggle="collapse"
+                                                 data-parent="#accordion" href="#collapse7"
+                                                 aria-expanded="true" aria-controls="collapse7">
+                                                <span class="label label-info"> 更多 <span
+                                                        class="badge">1</span></span></a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="collapse7" class="panel-collapse collapse" role="tabpanel"
+                     aria-labelledby="heading7">
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">近一个月总。。。。。。。。。。。
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading8">
+                    <table width="95%" border="0">
+                        <tr>
+                            <td align="left"><h4 class="panel-title"><a href="#">物资分析..</a></h4></td>
+                            <td align="center"><a href="#" class="red20">132.32</a></td>
+                            <td align="right"><a role="button" data-toggle="collapse"
+                                                 data-parent="#accordion" href="#collapse8"
+                                                 aria-expanded="true" aria-controls="collapse8">
+                                                <span class="label label-info"> 更多 <span
+                                                        class="badge">1</span></span></a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="collapse8" class="panel-collapse collapse" role="tabpanel"
+                     aria-labelledby="heading8">
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">近一个月总。。。。。。。。。。。
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+</body>
+</html>
+

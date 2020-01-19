@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>bg_测试</title>
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="../lib/jquery/jquery-1.11.1.min.js"></script>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="../lib/bootstrap/bootstrap.min.css">
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="../lib/bootstrap/bootstrap.min.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    <!-- 组件-->
+    <link rel="stylesheet" href="../lib/bootstrap/bootstrap-treeview.min.css">
+    <script src="../lib/bootstrap/bootstrap-treeview.min.js"></script>
+</head>
+<body>
+<header id="header0"></header>
+
+<div class="container-fluid">
+    <div class="col-sm-3 col-md-2">
+        <div id="dictTree"></div>
+    </div>
+    <div class="col-sm-9 col-md-10">
+        <table class="table table-responsive table-hover table-striped">
+            <thead>
+            <tr id="thMain"></tr>
+            </thead>
+            <tbody id="tbMain">
+
+            </tbody>
+
+        </table>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addDict">增加</button>
+    </div>
+</div>
+
+<footer id="footer0"></footer>
+</body>
+
+<!-- Modal -->
+<div class="modal fade" id="addDict" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="addDictLabel">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> Remember me
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-default">Sign in</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../lib/js/service.js"></script>
+<script src="../lib/js/tools.js"></script>
+<script src="../lib/js/controller.js"></script>
+<script type="application/javascript">
+    function getDictTreeData() {
+        var params = {};
+        var retFunc = {};
+        retFunc['success'] = function (data1) {
+            if (data1["code"] == "0") {
+
+                var error = $('#dictTree').treeview({
+                    data: data1.result,
+                    onNodeSelected: function (event, data2) {
+                        $("#thMain").empty();
+                        $("#tbMain").empty();
+                        var rowData = data2.rowData;
+                        $("#thMain").append('<th>#</th>');
+                        $("#thMain").append('<th>父编码</th>');
+                        $("#thMain").append('<th>子编码</th>');
+                        $("#thMain").append('<th>' + rowData.NAME + '</th>');
+                        $("#thMain").append('<th>' + rowData.PARAM1 + '</th>');
+                        $("#thMain").append('<th>' + rowData.PARAM2 + '</th>');
+                        $("#thMain").append('<th>' + rowData.PARAM3 + '</th>');
+                        $("#thMain").append('<th>' + rowData.PARAM4 + '</th>');
+                        $("#thMain").append('<th>' + rowData.PARAM5 + '</th>');
+                        $("#thMain").append('<th> </th>');
+                        var x
+                        for (x in data2.nodes) {
+                            $("#tbMain").append('<tr id="td' + data2.nodes[x].rowData.SPARENT + '"></tr>')
+                            $("#td" + data2.nodes[x].rowData.SPARENT).append('<td>' + x + '</td>')
+                            $("#td" + data2.nodes[x].rowData.SPARENT).append('<td>' + data2.nodes[x].rowData.PARENT + '</td>')
+                            $("#td" + data2.nodes[x].rowData.SPARENT).append('<td>' + data2.nodes[x].rowData.CODE + '</td>')
+                            $("#td" + data2.nodes[x].rowData.SPARENT).append('<td>' + data2.nodes[x].rowData.NAME + '</td>')
+                            $("#td" + data2.nodes[x].rowData.SPARENT).append('<td>' + data2.nodes[x].rowData.PARAM1 + '</td>')
+                            $("#td" + data2.nodes[x].rowData.SPARENT).append('<td>' + data2.nodes[x].rowData.PARAM2 + '</td>')
+                            $("#td" + data2.nodes[x].rowData.SPARENT).append('<td>' + data2.nodes[x].rowData.PARAM3 + '</td>')
+                            $("#td" + data2.nodes[x].rowData.SPARENT).append('<td>' + data2.nodes[x].rowData.PARAM4 + '</td>')
+                            $("#td" + data2.nodes[x].rowData.SPARENT).append('<td>' + data2.nodes[x].rowData.PARAM5 + '</td>')
+                        }
+
+                    }
+                });
+            } else {
+                $("#msgContent").text(data1["msg"]);
+                $('#msgbox0').modal('show');
+            }
+        };
+        retFunc['error'] = function (data) {
+
+        };
+        retFunc['complete'] = function (data) {
+
+        };
+        params['parent'] = getUrlParams('parent');
+        getData('D102', params, retFunc);
+    }
+
+    $(document).ready(function () {
+        getDictTreeData();
+    });
+
+
+</script>
+</html>
